@@ -25,7 +25,7 @@ SECRET_KEY = '^!6&hdzk$f5h-x6-%7sio#j)ics(1@7epeo!m=u9jsdk)_10*@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['brunojular.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
