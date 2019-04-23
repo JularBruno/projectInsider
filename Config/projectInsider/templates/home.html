@@ -1,7 +1,11 @@
+{% load static %}
+
 <html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
 
-<link rel="stylesheet" type="text/css" href="mystyle.css">  
     <style>
 
     <!-- Barra de porcentajes -->
@@ -28,28 +32,54 @@
     .php {width: 60%; background-color: #808080;}
     
     <!-- ----- -->
+    
 
-    .circle {
-      width: 500px;
-      height: 500px;
+    <!-- navbar -->
+    
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+    .navbar a:hover {
+      background: #ddd;
+      color: black;
+    }
+
+    <!-- ----- --> 
+    
+    .imgPerfil {
       border-radius: 50%;
-      font-size: 50px;
-      color: #fff;
-      line-height: 500px;
-      text-align: center;
-      background: #000
+    }
+
+    p {
+      font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     }
 
     </style>
 
 
 </head>
-<body>
+<body bgcolor="#000000">
+  
+
+  <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  </div>
+
 
   <!-- Barra de porcentajes -->
-
+  <div>
   <p style="margin-top: 1em;
-  margin-left: 50%;">Cuanto te quiero:</p>
+  margin-left: 50%; color:white">Cuanto The Quick Brown Fox Jumps Over The Lazy Dog   :</p>
 
   <div class="container">
   <div class="skills html">Mucho</div>
@@ -57,7 +87,10 @@
 
    <!-- ----- -->
 
-   <div class="circle">Hola Julieta!</div>
+   <div>
+   <img src="{% static 'projectInsider/images/perfil.jpg' %}" class="imgPerfil" alt="avatar" style="width:200px" >
+   </div>
+
 
 </body>
 </html>
