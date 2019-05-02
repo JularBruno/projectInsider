@@ -46,6 +46,21 @@
 </script>
 <!-- ---- -->
 
+<style type="text/css">
+  
+  .collapsible li.active i {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+.vl {
+  border-left: 0.5vh solid green;
+  height: 5vh;
+  top: 0;
+}
+
+</style>
 </head>
 
 <body bgcolor="#8d6e63" style="font-family:URW Gothic L">
@@ -66,26 +81,67 @@
   </header>
 
 <!-- ----- -->
-  <main>
+  <main >
 
 
-  <div class="container amber" style="margin-top: 3vh; margin-bottom: 3vh ">
-    <div class="row" style="color:black">
+  <div class="container amber" style="margin-top: 3vh; margin-bottom: 3vh;">
+    <div class="row" style="color:black; ">
       <div class="col s6 push-s6">
-          <img src="{% static 'projectInsider/images/perfil.jpg' %}" class="imgPerfil circle responsive-img left" alt="avatar" style="width:300px; margin-top: 3vh; ">
+          <img src="{% static 'projectInsider/images/perfil.jpg' %}" class="imgPerfil circle responsive-img left" alt="avatar" style="width:300px; margin-top: 3vh; margin: 10px;
+          border:3px solid white;
+          border-radius: 500px;
+          -webkit-border-radius: 500px;
+          -moz-border-radius: 500px;">
       </div>    
       
       <div class="col s6 pull-s6" style="margin-top: 6vh; ">
-        <h1 style="margin-bottom: 3vh; margin-top: 1vh; margin-left: 12vh;">Bruno Jular</h1>
-        <p> Yo soy mi creacion y mi destino equis de </p>
+        <h1 style=" margin-top: 1vh; margin-left: 12vh; font-family:URW Gothic L;">Bruno Jular</h1>
       </div>
+
+      <div class="col s2 pull-s6" style="margin-top: 4vh;">
+        <h1 style="margin-left: 12vh; font-size:3vh;">Nacimiento</h1>
+      </div>
+
+      <div class="col s1 pull-s6" style="margin-top: 4vh; ">
+        <div class="vl" style=" margin-left: 1.5vh;"></div>
+      </div>
+
+      <div class="col s3 pull-s6" style="margin-top: 4vh; ">
+        <h1 style="font-size:3vh;">23/06/2000</h1>
+      </div>
+
+
+      <div class="col s2 pull-s6" style="margin-top: 2vh;">
+        <h1 style="font-size:3vh;  margin-left: 12vh;">Ubicación</h1>
+      </div>
+
+      <div class="col s1 pull-s6" style="margin-top: 2vh; ">
+        <div class="vl" style=" margin-left: 1.5vh;"></div>
+      </div>
+
+      <div class="col s3 pull-s6" style="margin-top: 2vh; ">
+        <h1 style="font-size:3vh;">Córdoba - Argentina</h1>
+      </div>
+
+      <div class="col s2 pull-s6" style="margin-top: 2vh;">
+        <h1 style="font-size:3vh;  margin-left: 12vh;">Título</h1>
+      </div>
+
+      <div class="col s1 pull-s6" style="margin-top: 2vh; ">
+        <div class="vl" style=" margin-left: 1.5vh;"></div>
+      </div>
+
+      <div class="col s3 pull-s6" style="margin-top: 2vh; ">
+        <h1 style="font-size:3vh;">Secundario en ITS Villada</h1>
+      </div>
+
     </div>
 
 <!-- ----- -->
     <div class="divider"></div>
   
   
-    <div class="col s12 amber" style="color:black;">
+    <div class="col s12 amber lighten-1" style="color:black;">
     
 
     <h3 style="margin-top: 2vh; margin-left: 1vh;"> Aptitudes </h3>
@@ -93,66 +149,53 @@
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Django Q </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
-      <div class="w3-container w3-teal w3-center w3-text-green w3-round-large" style="width:25%;"> a</div>
-      </div> 
-
-    <h5 style="margin-top: 2vh; margin-left: 3vh;"> Django </h5>
-      
-      <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
-      <div class="w3-container w3-teal w3-center w3-text-green w3-round-large" style="width:25%;"> a</div>
-      </div>       
-
-    <h5 style="margin-top: 2vh; margin-left: 3vh;"> Django </h5>
-      
-      <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
-      <div class="w3-container w3-teal w3-center w3-text-green w3-round-large" style="width:25%;"> a</div>
-      </div> 
-
-    <h5 style="margin-top: 2vh; margin-left: 3vh;"> Django </h5>
-      
-      <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
-      <div class="w3-container w3-green w3-center w3-text-green w3-round-large" style="width:25%;"> a</div>
-      </div>             
-
-    <h5 style="margin-top: 2vh; margin-left: 3vh;"> Django </h5>
-      
-      <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
-      <div class="w3-container w3-green w3-center w3-text-green w3-round-large" style="width:25%;"> a</div>
-      </div>       
+      <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:25%;"> a</div>
+      </div>                    
       
     <h3 style="margin-top: 2vh; margin-left: 1vh;"> Idiomas </h3>
 
-    <h5 style="margin-top: 2vh; margin-left: 3vh;"> Inglés </h5>
+    <h5 style="margin-top: 2vh; margin-left: 3vh; "> Inglés </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
-      <div class="w3-container w3-green w3-center w3-text-green w3-round-large" style="width:25%;"> a</div>
-      </div> 
+      <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:90%;"> a</div>
+      </div>
 
-    </div>
+    <h5 style="margin-top: 2vh; margin-left: 3vh; "> Alemán </h5>
+      
+      <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
+      <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:7%;"> a</div>
+      </div>
 
+    <h5 style="margin-top: 2vh; margin-left: 3vh; "> Portugués </h5>
+      
+      <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
+      <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:20%;"> a</div>
+      </div>
+
+</div>
 <!-- ----- -->
 
     <div class="divider" style="margin-top: 2vh;"></div>
   
   
-    <div class="col s12 amber" style="color:white;">
+    <div class="col s12 amber lighten-2" style="color:white;">
 
       <h3 class="w3-text-black" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 1vh;"> Experiencia </h3>
         
 
 <!-- Collapsible -->
 
-    <ul class="collapsible popout w3-text-black amber" style="margin-left: 2vh; margin-right: 2vh;">
+    <ul class="collapsible popout w3-text-black amber lighten-2" style="margin-left: 2vh; margin-right: 2vh;">
       <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+        <div id="click_advance" class="collapsible-header"><i  class="material-icons">keyboard_arrow_right</i>First</div>
         <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
       <li>
-        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Second</div>
         <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
       <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Third</div>
         <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
     </ul>
@@ -163,6 +206,7 @@
     <div class="divider" style="margin-top: 2vh;"></div>
 
 </div>
+</div>
 
 </main>
 
@@ -172,14 +216,14 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="black-text">Contacto</h5>
-          <p class="black-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <p class="black-text text-lighten-4"></p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="black-text">Links</h5>
+          <h5 class="black-text">GitHub: https://github.com/JularBruno</h5>
           <ul>
-            <li><a class="black-text text-lighten-3"">Telefono:</a></li>
-            <li><a class="black-text text-lighten-3"">Correo:</a></li>
-            <li><a class="black-text text-lighten-3"">GitHub:</a></li>
+            <li><a class="black-text text-lighten-3"">Telefono: +54 351 261-3917</a></li>
+            <li><a class="black-text text-lighten-3"">Correo: brunojular00@gmail.com </a></li>
+            <li><a class="black-text text-lighten-3""></a></li>
           </ul>
         </div>
       </div>
