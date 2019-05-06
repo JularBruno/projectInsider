@@ -58,8 +58,11 @@ $(document).ready(function(){
   transform: rotate(90deg);
   }
 
+/* DIvider profile */
+
   .vl {
-    border-left: 0.5vh solid green;
+    border-left: 0.5vh 
+    solid olivedrab;
     height: 5vh;
     top: 0;
   }
@@ -89,7 +92,7 @@ footer {
 </style>
 </head>
 
-<body bgcolor="#8d6e63" style="font-family:URW Gothic L">
+<body bgcolor="#464646" style="font-family:URW Gothic L">
 
   <!-- Header -->
   
@@ -99,7 +102,7 @@ footer {
 <div>
 
 <ul id="sidenav-1" class="sidenav sidenav-fixed" style="max-width : 30vh">
-  <li><a class="subheader">Curriculum Vitae</a></li>
+  <li><a style="font-size: 4vh; margin-bottom: 10vh;" class="subheader w3-text-teal">Curriculum Vitae</a></li>
   <li><a href="#Perfil">Perfil</a></li>
   <li><a href="#Aptitudes">Aptitudes</a></li>
   <li><a href="#Experiencia">Experiencia</a></li>
@@ -119,15 +122,15 @@ footer {
   <div class="container amber" style="margin-top: 3vh; margin-bottom: 3vh; margin-top: 3vh;" id="Perfil">
     <div class="row" style="color:black; ">
       <div class="col s6 push-s6">
-          <img src="{% static 'projectInsider/images/perfil.jpg' %}" class="imgPerfil circle responsive-img left" alt="avatar" style="width:300px; margin-top: 3vh; margin: 10px;
-          border:3px solid white;
+          <img src="{% static 'projectInsider/images/perfilR.jpg' %}" class="imgPerfil circle responsive-img left" alt="avatar" style="width:300px; margin-top: 3vh; margin: 2vh;
+          border:0.5vh solid white;
           border-radius: 500px;
           -webkit-border-radius: 500px;
           -moz-border-radius: 500px;">
       </div>    
       
       <div class="col s6 pull-s6" style="margin-top: 6vh; ">
-        <h1 style=" margin-top: 1vh; margin-left: 12vh;">Bruno Jular</h1>
+        <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: 12vh;">Bruno Jular</h1>
       </div>
 
       <div class="col s2 pull-s6" style="margin-top: 4vh;">
@@ -135,7 +138,7 @@ footer {
       </div>
 
       <div class="col s1 pull-s6" style="margin-top: 4vh; ">
-        <div class="vl" style=" margin-left: 6vh;"></div>
+        <div class="vl" style=" margin-left: 7.5vh;"></div>
       </div>
 
       <div class="col s3 pull-s6" style="margin-top: 4vh; ">
@@ -148,7 +151,7 @@ footer {
       </div>
 
       <div class="col s1 pull-s6" style="margin-top: 2vh; ">
-        <div class="vl" style=" margin-left: 6vh;"></div>
+        <div class="vl" style=" margin-left: 7.5vh;"></div>
       </div>
 
       <div class="col s3 pull-s6" style="margin-top: 2vh; ">
@@ -160,17 +163,17 @@ footer {
       </div>
 
       <div class="col s1 pull-s6" style="margin-top: 2vh; ">
-        <div class="vl" style=" margin-left: 6vh;"></div>
+        <div class="vl" style=" margin-left: 7.5vh;"></div>
       </div>
 
       <div class="col s3 pull-s6" style="margin-top: 2vh; ">
-        <h1 style="font-size:3vh;">Secundario en ITS Villada</h1>
+        <h1 style="font-size:3vh;">Técnico Programador - ITS Villada</h1>
       </div>
-
-      <div class="col s6 pull-s6" style="margin-top: 2vh; ">
-        <h1 style="font-size:3vh; margin-left: 2vh">Introducción</h1>
+<!--
+      <div class="col s6 pull-s6" style="margin-top: 6vh; ">
+        <h1 style="font-size:3vh; margin-left: 12vh">Introducción</h1>
       </div>
-
+-->
 
     </div>
 
@@ -178,7 +181,7 @@ footer {
     <div class="divider"></div>
   
   
-    <div class="col s12 amber lighten-1" style="color:black;">
+    <div class="col s12 amber" style="color:black;">
     
 
     <h1 style="margin-top: 2vh; margin-left: 40%;" id="Aptitudes"> Aptitudes </h1>
@@ -260,7 +263,6 @@ footer {
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:60%;"> a</div>
     </div>
 
-<!--- ------------ --->
 
     <h3 style="margin-top: 2vh; margin-left: 5%;"> Frameworks </h3>
 
@@ -395,45 +397,119 @@ footer {
       </div>
 
 
-
-
 </div>
 <!-- ----- -->
 
     <div class="divider" style="margin-top: 2vh;"></div>
   
   
-    <div class="col s12 amber lighten-2" style="color:white;">
+    <div class="col s12 amber" style="color:white;">
 
       <h1 class="w3-text-black" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 37%;" id="Experiencia"> Experiencia </h1>
 
 <!-- Collapsible -->
 
-    <ul class="collapsible popout w3-text-black amber lighten-2" style="margin-left: 2vh; margin-right: 2vh;">
+    <ul class="collapsible popout w3-text-black amber" style="margin-left: 2vh; margin-right: 2vh;">
       
       <li>
-        <div id="click_advance" class="collapsible-header"><i  class="material-icons">keyboard_arrow_right</i>Pasantías estudiantiles</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div id="click_advance" class="collapsible-header"><i  class="material-icons">keyboard_arrow_right</i>IncluIT: Pasantías estudiantiles</div>
+        <div class="collapsible-body">
+        <h3>2 al 27 de Julio del 2018</h3>
+        <h4>Tecnología: Django</h4>
+        <span>
+          > IncluIt: Humberto 1° 670, Córdoba.
+        </br>
+          > Scrum Master, Analista en sistemas, Tester.
+
+      </span>
+    </div>
+      <div class="collapsible-body">
+      <a class="teal-text" target="_blank" href="https://github.com/Grupo2Villada/proyectoFAT" 
+      style="font-size: 4vh; margin-left: 35%">GitHub</a>
+      <a class="teal-text" target="_blank" href="https://trello.com/b/eTTSMJPb/proyecto" style="font-size: 4vh; margin-left: 4vh">Trello</a>
+
+      </div>
       </li>
       
       <li>
         <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>PillDose</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-body">
+        <h3>Jornada estudiantil 2018</h3>
+        <h4>Tecnología: AndroidStudio</h4>
+        <span>
+          > Realización de una app de android para la materia Aplicación de nuevas tecnologías.
+        </br>
+          > Programación de aplicación para un “dispositivo pastillero” junto al area de electrónica.
+        </br>
+          > Aplicación para personal a cargo de uno o varios pacientes. Permite programar según un horario, la toma adecuada de medicación en personas con trastornos conductuales o con pérdida de memoria. Mediante bluetooth se envía la información de manera tal, que quede configurado cada pastillero.
+        </span>
+      </div>
+        <div class="collapsible-body">
+        <a class="teal-text" target="_blank" href="https://github.com/JularBruno/PillDose" 
+        style="font-size: 4vh; margin-left: 42%">GitHub</a>
+        
+        </div>
       </li>
 
       <li>
         <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>TheFitpack</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-body">
+        <h3>Junio a Septiembre 2018</h3>
+        <h4>Tecnología: WordPress</h4>
+        <span>
+          > Trabajo virtual con cliente residiendo en Barcelona, España.
+        </br>
+          > Realización de una página de presentación, demostración y organización de clases de un gimnasio al aire libre.
+        </span>
+      </div>
+        <div class="collapsible-body">
+        <a class="teal-text" target="_blank" href="https://thefitpack.com/" 
+        style="font-size: 4vh; margin-left: 40%">TheFitPack</a>
+
+        </div>
       </li>
       
       <li>
-        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Mozo</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Personal en servicio de eventos</div>
+        <div class="collapsible-body">
+        <span>
+          > Armado de salón y atención de los invitados al evento
+        </br>
+          <p> </p>
+        </br>        
+          > Salón Avril – Temporada diciembre 2017 y diciembre a febrero 2018
+        </br>  
+          > Barrancas del Chateau, Salón de eventos – Evento diciembre 2018 
+        </br>  
+          > Estancia Causana – Evento abril 2018
+        </span>
+        </div>
       </li>
       
       <li>
         <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Empresa familiar</div>
-        <div class="collapsible-body"><h3>asd</h3><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-body">
+        <span>
+          > Negociación con clientes.
+        </br>  
+          > Transporte de productos y paquetes.
+        </br>    
+          > Compra de materia prima.
+        </br>    
+          > Organización y coordinación de personal.
+        </br>    
+          > Distribución de actividades.
+        </br>    
+          > Administración, gestión en general.
+        </br>    
+          > Control y actualización de precios.
+        </br>    
+          > Control de calidad.
+        </br>    
+          > Realización de trabajos particulares en matricería y piezas de caucho.
+
+        </span>
+        </div>
       </li>
 
     </ul>
@@ -452,6 +528,9 @@ footer {
           <p class="black-text text-lighten-4"></p>
         
         <div class="col l4 offset-l2 s12">
+          <a class="black-text" href="https://github.com/JularBruno/projectInsider" style="margin-left: 8%;">GitHub de ésta página!</a>
+          <ul>
+
           <a class="teal-text" href="https://github.com/JularBruno" style="margin-left: 8%;">GitHub</a>
           <ul>
             <li><a class="black-text text-lighten-3" style="margin-left: 8%;">Telefono: +54 351 261-3917</a></li>
