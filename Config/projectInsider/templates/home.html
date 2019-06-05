@@ -51,7 +51,40 @@ $(document).ready(function(){
 <!-- ---- -->
 
 <style type="text/css">
-  
+
+
+@media only screen and (max-width: 720px){
+  .asd{
+    margin-right: 15%;
+    margin-left: -40%;
+  }
+  .sidenav{
+    display: none;
+  }
+
+  .perfilImgMobile{
+    width:70%; margin-top: 3%; margin-left: 20%;
+  }
+
+  .perfilImg{
+    display: none;
+  }
+
+  .notMobile{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 720px){
+  .perfilImgMobile{
+    display: none;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+}
 /* collapsible rotation button */
 
   .collapsible li.active i {
@@ -69,6 +102,14 @@ $(document).ready(function(){
     top: 0;
   }
 
+  .vlMobile {
+    border-left: 0.5vh 
+    solid blue;
+    height: 7vh;
+    top: 0;
+  }
+
+
 /* just for all html font */
 
   html * {
@@ -85,11 +126,6 @@ footer {
   padding-left: 10vh;
 }
 
-@media only screen and (max-width : 10vh) {
-  header, main, footer {
-    padding-left: 0;
-  }
-}
 
 </style>
 </head>
@@ -118,59 +154,118 @@ footer {
   </header>
 
 <!-- ----- -->
-  <main >
+  <main class="asd">
 
 
-  <div class="container amber" style="margin-top: 3vh; margin-bottom: 3vh; margin-top: 3vh;" id="Perfil">
-    <div class="row" style="color:black; ">
-      <div class="col s6 push-s6">
-          <img src="{% static 'projectInsider/images/perfilR.jpg' %}" class="imgPerfil circle responsive-img left" alt="avatar" style="width:300px; margin-top: 3vh; margin: 2vh;
-          border:0.5vh solid white;
-          border-radius: 500px;
-          -webkit-border-radius: 500px;
-          -moz-border-radius: 500px;">
+  <div class="container amber" style="margin-top: 3%; margin-bottom: 3%; margin-left: 20%" id="Perfil">
+    <div class="row " style="color:black; ">
+      <div class="col s6 push-s6 perfilImg" >
+          <img src="{% static 'projectInsider/images/perfilR.jpg' %}" class="imgPerfil circle responsive-img" alt="avatar" style="width:80%; margin-top: 3%; margin-left: 2%;
+          border: 2.5px
+          solid white;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;">
+      </div> 
+
+      <!--  -->
+
+      <div class="perfilImgMobile" >
+          <img src="{% static 'projectInsider/images/perfilR.jpg' %}" class="imgPerfil circle responsive-img" alt="avatar" style="width:80%; margin-top: 3%; margin-left: 2%;
+          border: 2.5px
+          solid white;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;">
       </div>    
+
+      <!--  -->
       
-      <div class="col s6 pull-s6" style="margin-top: 6vh; ">
+      <div class="col s6 pull-s6 notMobile" style="margin-top: 6vh; ">
         <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: 12vh;">Bruno Jular</h1>
       </div>
 
-      <div class="col s2 pull-s6" style="margin-top: 4vh;">
+      <div class="col s2 pull-s6 notMobile" style="margin-top: 4vh;">
         <h1 style="margin-left: 12vh; font-size:3vh;">Nacimiento</h1>
       </div>
 
-      <div class="col s1 pull-s6" style="margin-top: 4vh; ">
+      <div class="col s1 pull-s6 notMobile" style="margin-top: 4vh; ">
         <div class="vl" style=" margin-left: 7.5vh;"></div>
       </div>
 
-      <div class="col s3 pull-s6" style="margin-top: 4vh; ">
+      <div class="col s3 pull-s6 notMobile" style="margin-top: 4vh; ">
         <h1 style="font-size:3vh;">23/06/2000</h1>
       </div>
 
 
-      <div class="col s2 pull-s6" style="margin-top: 2vh;">
+      <div class="col s2 pull-s6 notMobile" style="margin-top: 2vh;">
         <h1 style="font-size:3vh;  margin-left: 12vh;">Ubicación</h1>
       </div>
 
-      <div class="col s1 pull-s6" style="margin-top: 2vh; ">
+      <div class="col s1 pull-s6 notMobile" style="margin-top: 2vh; ">
         <div class="vl" style=" margin-left: 7.5vh;"></div>
       </div>
 
-      <div class="col s3 pull-s6" style="margin-top: 2vh; ">
+      <div class="col s3 pull-s6 notMobile" style="margin-top: 2vh; ">
         <h1 style="font-size:3vh;">Córdoba - Argentina</h1>
       </div>
 
-      <div class="col s2 pull-s6" style="margin-top: 2vh;">
+      <div class="col s2 pull-s6 notMobile" style="margin-top: 2vh;">
         <h1 style="font-size:3vh;  margin-left: 12vh;">Título</h1>
       </div>
 
-      <div class="col s1 pull-s6" style="margin-top: 2vh; ">
+      <div class="col s1 pull-s6 notMobile" style="margin-top: 2vh; ">
         <div class="vl" style=" margin-left: 7.5vh;"></div>
       </div>
 
-      <div class="col s3 pull-s6" style="margin-top: 2vh; ">
+      <div class="col s3 pull-s6 notMobile" style="margin-top: 2vh; ">
         <h1 style="font-size:3vh;">Técnico Programador - ITS Villada</h1>
       </div>
+
+      <!--  -->
+
+      <div class="col s6 pull-s1 t1 mobile" style="margin-top: 6vh; ">
+        <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: -12vh;">Bruno Jular</h1>
+      </div>
+
+      <div class="col s2 pull-s6 mobile" style="margin-top: 4vh;">
+        <h1 style="margin-left: 39vh; font-size:3vh;">Nacimiento</h1>
+      </div>
+
+      <div class="col s1 pull-s6 mobile" style="margin-top: 20vh;margin-bottom: -2vh; margin-left: 10vh;">
+        <div class="vl" style=""></div>
+      </div>
+
+      <div class="col s3 pull-s6 mobile" style="margin-top: 4vh; ">
+        <h1 style="font-size:3vh; margin-left: 40vh;">23/06/2000</h1>
+      </div>
+
+
+      <div class="col s2 pull-s6 mobile" style="margin-top: 12vh;">
+        <h1 style="font-size:3vh;  margin-left: -3vh;">Ubicación</h1>
+      </div>
+
+      <div class="col s1 pull-s6 mobile" style="margin-top: 2vh; ">
+        <div class="vl" style=" margin-left: 7.5vh;"></div>
+      </div>
+
+      <div class="col s3 pull-s6 mobile" style="margin-top: 2vh; ">
+        <h1 style="font-size:3vh;">Córdoba - Argentina</h1>
+      </div>
+
+      <div class="col s2 pull-s6 mobile" style="margin-top: 2vh;">
+        <h1 style="font-size:3vh;  margin-left: 23vh;">Título</h1>
+      </div>
+
+      <div class="col s1 pull-s6 mobile" style="margin-top: 2vh; ">
+        <div class="vl" style=" margin-left: 7.5vh;"></div>
+      </div>
+
+      <div class="col s3 pull-s6 mobile" style="margin-top: 2vh; ">
+        <h1 style="font-size:3vh;">Técnico Programador - ITS Villada</h1>
+      </div>
+
+
 <!--
       <div class="col s6 pull-s6" style="margin-top: 6vh; ">
         <h1 style="font-size:3vh; margin-left: 12vh">Introducción</h1>
