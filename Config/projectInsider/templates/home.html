@@ -47,6 +47,19 @@ $(document).ready(function(){
   $('#sidenav-1').sidenav({ edge: 'left' });
 });       
 
+/* filter */
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+
 </script>
 <!-- ---- -->
 
@@ -143,9 +156,11 @@ footer {
   <li><a style="font-size: 4vh; margin-bottom: 10vh;" class="subheader w3-text-teal">Curriculum Vitae</a></li>
   <li><a href="#Perfil">Perfil</a></li>
   <li><a href="#Aptitudes">Aptitudes</a></li>
+  <li><a href="#Cap">Continuidades</a></li>
   <li><a href="#Experiencia">Experiencia</a></li>
   <li><a href="#Contacto">Contacto</a></li>
   
+
 </ul>
 
 </div>        
@@ -199,7 +214,7 @@ footer {
 
 
       <div class="col s2 pull-s6 notMobile" style="margin-top: 2vh;">
-        <h1 style="font-size:3vh;  margin-left: 12vh;">Ubicación</h1>
+        <h1 style="font-size:3vh; margin-left: 12vh;">Ubicación</h1>
       </div>
 
       <div class="col s1 pull-s6 notMobile" style="margin-top: 2vh; ">
@@ -224,45 +239,45 @@ footer {
 
       <!--  -->
 
-      <div class="col s6 pull-s1 t1 mobile" style="margin-top: 6vh; ">
-        <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: -12vh;">Bruno Jular</h1>
+      <div class="col s6 pull-s1 t1 mobile" style="margin-top: 4vh;">
+        <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: 22vh;">Bruno Jular</h1>
       </div>
 
-      <div class="col s2 pull-s6 mobile" style="margin-top: 4vh;">
-        <h1 style="margin-left: 39vh; font-size:3vh;">Nacimiento</h1>
+      <div class="col s2 pull-s6 mobile" style="margin-top: 5vh;">
+        <h1 style="margin-left: 3vh; font-size:3vh; margin-top: 20vh;">Nacimiento</h1>
       </div>
 
-      <div class="col s1 pull-s6 mobile" style="margin-top: 20vh;margin-bottom: -2vh; margin-left: 10vh;">
+      <div class="col s1 pull-s6 mobile" style="margin-top: 24vh;margin-bottom: -2vh; margin-left: 12vh;">
         <div class="vl" style=""></div>
       </div>
 
-      <div class="col s3 pull-s6 mobile" style="margin-top: 4vh; ">
-        <h1 style="font-size:3vh; margin-left: 40vh;">23/06/2000</h1>
+      <div class="col s3 pull-s6 mobile" style="margin-top: 3vh;">
+        <h1 style="font-size:3vh; margin-left: 14vh; margin-top: -5vh;">23/06/2000</h1>
       </div>
 
-
-      <div class="col s2 pull-s6 mobile" style="margin-top: 12vh;">
-        <h1 style="font-size:3vh;  margin-left: -3vh;">Ubicación</h1>
-      </div>
-
-      <div class="col s1 pull-s6 mobile" style="margin-top: 2vh; ">
-        <div class="vl" style=" margin-left: 7.5vh;"></div>
-      </div>
-
-      <div class="col s3 pull-s6 mobile" style="margin-top: 2vh; ">
-        <h1 style="font-size:3vh;">Córdoba - Argentina</h1>
-      </div>
 
       <div class="col s2 pull-s6 mobile" style="margin-top: 2vh;">
-        <h1 style="font-size:3vh;  margin-left: 23vh;">Título</h1>
+        <h1 style="font-size:3vh;  margin-left: 31.5vh;">Ubicación</h1>
       </div>
 
-      <div class="col s1 pull-s6 mobile" style="margin-top: 2vh; ">
-        <div class="vl" style=" margin-left: 7.5vh;"></div>
+      <div class="col s1 pull-s6 mobile" style="margin-top: 3vh;">
+        <div class="vl" style=" margin-left: 40.5vh;"></div>
       </div>
 
-      <div class="col s3 pull-s6 mobile" style="margin-top: 2vh; ">
-        <h1 style="font-size:3vh;">Técnico Programador - ITS Villada</h1>
+      <div class="col s3 pull-s6 mobile" style="margin-top: -1.5vh;">
+        <h1 style="font-size:3vh; margin-left: 38vh;">Córdoba - Argentina</h1>
+      </div>
+
+      <div class="col s2 pull-s6 mobile" style="margin-top: 15vh;">
+        <h1 style="font-size:3vh;  margin-left: 3vh;">Título</h1>
+      </div>
+
+      <div class="col s1 pull-s6 mobile" style="margin-top: 15vh;">
+        <div class="vl" style=" margin-left: 12vh;"></div>
+      </div>
+
+      <div class="col s3 pull-s6 mobile" style="margin-top: 12vh;">
+        <h1 style="font-size:3vh; margin-left: 9vh;">Técnico Programador - ITS Villada</h1>
       </div>
 
 
@@ -281,220 +296,265 @@ footer {
     <div class="col s12 amber" style="color:black;">
     
 
-    <h1 style="margin-top: 2vh; margin-left: 40%;" id="Aptitudes"> Aptitudes </h1>
+    <h1 style="margin-top: 2vh; margin-left: 20%;" id="Aptitudes"> Aptitudes </h1>
 
-    <h2 style="margin-top: 2vh; margin-left: 25%;margin-top: 4vh;"> Programación </h2>
+    <input class="form-control teal text-black" style="margin-left: 5%; width:90%; margin-top: 5%" id="myInput" type="text" placeholder="Filtrar...">
+
+    <ul class="list-group" id="myList">
+
+    <h2 style="margin-top: 2vh; margin-left: 5%; margin-top: 7vh;"> Programación </h2>
 
 <!--- ------------ --->
 
     <h3 style="margin-top: 2vh; margin-left: 5%;"> Lenguajes </h3>
 
+
+    <li class="list-group-item" >
       <h5 style="margin-top: 2vh; margin-left: 3vh; "> Python </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:60%;"> a</div>
       </div>
+    </li>
 
+    <li class="list-group-item" >  
       <h5 style="margin-top: 2vh; margin-left: 3vh; "> Java </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:60%;"> a</div>
       </div>
+    </li>  
 
+    <li class="list-group-item" >
       <h5 style="margin-top: 2vh; margin-left: 3vh; "> JavaScript </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:60%;"> a</div>
       </div>
+    </li>  
 
+    <li class="list-group-item" >  
       <h5 style="margin-top: 2vh; margin-left: 3vh; "> Html5 </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:80%;"> a</div>
       </div>
+    </li>
 
+    <li class="list-group-item" >
       <h5 style="margin-top: 2vh; margin-left: 3vh; "> Css3 </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:80%;"> a</div>
       </div>
-
+    </li>
 <!--- ------------ --->
 
     <h3 style="margin-top: 2vh; margin-left: 5%;"> Herramientas </h3>
 
-
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> GitHub </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:70%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Trello </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:90%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Docker </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:30%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Excel </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:70%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> DBeaver </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:60%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" > 
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Firebase </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:60%;"> a</div>
     </div>
-
+  </li>
 
     <h3 style="margin-top: 2vh; margin-left: 5%;"> Frameworks </h3>
-
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Django </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:70%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> AndroidStudio </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:80%;"> a</div>
     </div>
-
+  </li>  
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> ArduinoIDE </h5>
     
     <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
     <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:30%;"> a</div>
     </div>
+  </li>  
 
     <h3 style="margin-top: 2vh; margin-left: 5%;"> Data </h3>
-
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> SQL </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:70%;"> a</div>
       </div>
-
+  </li>       
+  <li class="list-group-item" >    
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> MongoDB </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:25%;"> a</div>
       </div>
-
+  </li>    
+  <li class="list-group-item" >    
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> PostgreSQL </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:25%;"> a</div>
       </div>                 
-    
+  </li>    
 <!--- ------------ --->
 
-    <h2 style="margin-top: 2vh; margin-left: 25%;"> Diseño </h2>
+    <h3 style="margin-top: 2vh; margin-left: 5%;"> Diseño </h3>
 
+  <li class="list-group-item" >  
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> InkScape </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:90%;"> a</div>
       </div> 
-
+  </li>    
+  <li class="list-group-item" >    
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Gimp </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:80%;"> a</div>
       </div> 
-
+  <li class="list-group-item" >    
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Blender para impresión 3D </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:65%;"> a</div>
       </div> 
-
+  <li class="list-group-item" >    
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> OpenShot </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:90%;"> a</div>
       </div>
-
+  <li class="list-group-item" >    
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Audacity </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:90%;"> a</div>
       </div>
+  </li>    
 
 <!--- ------------ --->    
 
-    <h2 style="margin-top: 2vh; margin-left: 25%;"> Electromecánica </h2>
+    <h3 style="margin-top: 2vh; margin-left: 5%;"> Electromecánica </h3>
 
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Interpetación de planos </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:65%;"> a</div>
       </div>
-
+  </li>    
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Manejo de Torno </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:40%;"> a</div>
       </div>
-
+  </li>    
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Manejo de fresa CNC </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:15%;"> a</div>
       </div>
-
+   </li>   
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Soldadura oxiacetilénica </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:75%;"> a</div>
       </div>
+  </li>    
 
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Soldadura de metal por arco </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:75%;"> a</div>
       </div>
-
+  </li>    
 
 
 <!--- ------------ --->
 
-    <h2 style="margin-top: 2vh; margin-left: 25%;"> Idiomas </h2>
-
+    <h3 style="margin-top: 2vh; margin-left: 5%;"> Idiomas </h3>
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Inglés </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:90%;"> a</div>
       </div>
-
+  </li>    
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Alemán </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:7%;"> a</div>
       </div>
-
+   </li>   
+  <li class="list-group-item" >
     <h5 style="margin-top: 2vh; margin-left: 3vh; "> Portugués </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:20%;"> a</div>
       </div>
+  </li>    
 
-
+</ul>
 </div>
+
+<!-- capacitación continua -->
+
+    <div class="divider" style="margin-top: 2vh;"></div>
+
+    <h1 class="w3-text-black" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 5%;" id="Cap"> Capacitación continua </h1>
+
+    <h3>react native</h3>
+
 <!-- ----- -->
 
     <div class="divider" style="margin-top: 2vh;"></div>
@@ -502,7 +562,7 @@ footer {
   
     <div class="col s12 amber" style="color:white;">
 
-      <h1 class="w3-text-black" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 37%;" id="Experiencia"> Experiencia </h1>
+      <h1 class="w3-text-black" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 5%;" id="Experiencia"> Experiencia </h1>
 
 <!-- Collapsible -->
 
@@ -522,7 +582,7 @@ footer {
     </div>
       <div class="collapsible-body">
       <a class="teal-text" target="_blank" href="https://github.com/Grupo2Villada/proyectoFAT" 
-      style="font-size: 4vh; margin-left: 35%">GitHub</a>
+      style="font-size: 4vh; margin-left: 5%">GitHub</a>
       <a class="teal-text" target="_blank" href="https://trello.com/b/eTTSMJPb/proyecto" style="font-size: 4vh; margin-left: 4vh">Trello</a>
 
       </div>
@@ -543,7 +603,7 @@ footer {
       </div>
         <div class="collapsible-body">
         <a class="teal-text" target="_blank" href="https://github.com/JularBruno/PillDose" 
-        style="font-size: 4vh; margin-left: 42%">GitHub</a>
+        style="font-size: 4vh; margin-left: 5%">GitHub</a>
         
         </div>
       </li>
@@ -561,7 +621,7 @@ footer {
       </div>
         <div class="collapsible-body">
         <a class="teal-text" target="_blank" href="https://thefitpack.com/" 
-        style="font-size: 4vh; margin-left: 40%">TheFitPack</a>
+        style="font-size: 4vh; margin-left: 5%">TheFitPack</a>
 
         </div>
       </li>
@@ -620,7 +680,7 @@ footer {
 
     <div class="col l6 s12 white" style="margin-bottom: 5vh;">
           
-          <h1 class="black-text" id="Contacto" style="margin-left: 40%; margin-bottom: 2vh;">Contacto</h1>
+          <h1 class="black-text" id="Contacto" style="margin-left: 8%; margin-bottom: 2vh;">Contacto</h1>
 
           <p class="black-text text-lighten-4"></p>
         
@@ -628,7 +688,7 @@ footer {
           <a class="black-text" href="https://github.com/JularBruno/projectInsider" style="margin-left: 8%;">GitHub de ésta página!</a>
           <ul>
 
-          <a class="teal-text" href="https://github.com/JularBruno" style="margin-left: 8%;">GitHub</a>
+          <a class="teal-text" href="https://github.com/JularBruno" style="margin-left:8%;">GitHub</a>
           <ul>
             <li><a class="black-text text-lighten-3" style="margin-left: 8%;">Telefono: +54 351 261-3917</a></li>
             <li><a class="black-text text-lighten-3" style="margin-left: 8%;">Correo: brunojular00@gmail.com </a></li>
