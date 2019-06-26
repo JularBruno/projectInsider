@@ -88,7 +88,7 @@ $(document).ready(function(){
   }
 }
 
-@media only screen and (min-width: 720px){
+@media only screen and (min-width: 500px){
   .perfilImgMobile{
     display: none;
   }
@@ -239,45 +239,24 @@ footer {
 
       <!--  -->
 
-      <div class="col s6 pull-s1 t1 mobile" style="margin-top: 4vh;">
-        <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: 22vh;">Bruno Jular</h1>
+      <div class="mobile" style="margin-top: 4vh;">
+        <h1 style="font-size: 7vh; margin-top: 1vh; margin-left: 13%;">Bruno Jular</h1>
       </div>
 
-      <div class="col s2 pull-s6 mobile" style="margin-top: 5vh;">
-        <h1 style="margin-left: 3vh; font-size:3vh; margin-top: 20vh;">Nacimiento</h1>
+      <div class="mobile" style="margin-top: 5vh;">
+        <h1 style="margin-left: 10%; font-size:3vh; margin-top: 2vh;">Nacimiento: 23/06/2000</h1>
       </div>
 
-      <div class="col s1 pull-s6 mobile" style="margin-top: 24vh;margin-bottom: -2vh; margin-left: 12vh;">
-        <div class="vl" style=""></div>
+      <div class="divider mobile" style="margin-left: 3vh; margin-right: 3vh; background-color: olivedrab;"></div>
+
+      <div class="mobile" style="margin-top: 1vh;">
+        <h1 style="font-size:3vh; margin-left: 6vh;">Ubicación: Córdoba-Argentina</h1>
       </div>
 
-      <div class="col s3 pull-s6 mobile" style="margin-top: 3vh;">
-        <h1 style="font-size:3vh; margin-left: 14vh; margin-top: -5vh;">23/06/2000</h1>
-      </div>
+      <div class="divider mobile olivedrab" style="margin-left: 3vh; margin-right: 3vh; margin-top: 2vh; background-color: olivedrab;"></div>
 
-
-      <div class="col s2 pull-s6 mobile" style="margin-top: 2vh;">
-        <h1 style="font-size:3vh;  margin-left: 31.5vh;">Ubicación</h1>
-      </div>
-
-      <div class="col s1 pull-s6 mobile" style="margin-top: 3vh;">
-        <div class="vl" style=" margin-left: 40.5vh;"></div>
-      </div>
-
-      <div class="col s3 pull-s6 mobile" style="margin-top: -1.5vh;">
-        <h1 style="font-size:3vh; margin-left: 38vh;">Córdoba - Argentina</h1>
-      </div>
-
-      <div class="col s2 pull-s6 mobile" style="margin-top: 15vh;">
-        <h1 style="font-size:3vh;  margin-left: 3vh;">Título</h1>
-      </div>
-
-      <div class="col s1 pull-s6 mobile" style="margin-top: 15vh;">
-        <div class="vl" style=" margin-left: 12vh;"></div>
-      </div>
-
-      <div class="col s3 pull-s6 mobile" style="margin-top: 12vh;">
-        <h1 style="font-size:3vh; margin-left: 9vh;">Técnico Programador - ITS Villada</h1>
+      <div class="mobile" style="margin-top: 2vh;">
+        <h1 style="font-size:3vh;  margin-left: 6vh;">Título: Técnico Programador - ITS Villada</h1>
       </div>
 
 
@@ -296,7 +275,7 @@ footer {
     <div class="col s12 amber" style="color:black;">
     
 
-    <h1 style="margin-top: 2vh; margin-left: 20%;" id="Aptitudes"> Aptitudes </h1>
+    <h1 style="margin-top: 2vh; margin-left: 10%;" id="Aptitudes"> Aptitudes </h1>
 
         <!-- filter -->
     <input class="form-control teal text-black" style="margin-left: 5%; width:90%; margin-top: 5%" id="myInput" type="text" placeholder="Filtrar...">
@@ -512,7 +491,7 @@ footer {
   </li>    
 
   <li class="list-group-item" >
-    <h5 style="margin-top: 2vh; margin-left: 3vh; "> Soldadura de metal por arco </h5>
+    <h5 style="margin-top: 2vh; margin-left: 3vh; margin-right: 1vh;"> Soldadura de metal por arco </h5>
       
       <div class="w3-light-grey w3-round-large" style="margin-top: 2vh; margin-left: 7vh; margin-right: 7vh;">
       <div class="w3-container w3-teal w3-center w3-text-teal w3-round-large" style="width:75%;"> a</div>
@@ -552,7 +531,9 @@ footer {
 
     <div class="divider" style="margin-top: 2vh;"></div>
 
-    <h1 class="w3-text-black" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 5%;" id="Cap"> Capacitación continua </h1>
+    <h1 class="w3-text-black notMobile" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 5%;" id="Cap"> Capacitación continua </h1>
+
+    <h2 class="w3-text-black Mobile" style="margin-top: 2vh; margin-bottom: 2vh;margin-left: 5%;" id="Cap"> Capacitación continua </h2>
 
     <img src="https://www.dribba.com/wp-content/uploads/2018/06/react-native-logo.jpg" class="responsive-img notMobile" alt="react" style="margin-left: 5%; width:40%; margin-top: 5%;">
 
@@ -698,7 +679,10 @@ footer {
           <a class="teal-text" href="https://github.com/JularBruno" style="margin-left:8%;">GitHub</a>
           <ul>
             <li><a class="black-text text-lighten-3" style="margin-left: 8%;">Telefono: +54 351 261-3917</a></li>
-            <li><a class="black-text text-lighten-3" style="margin-left: 8%;">Correo: brunojular00@gmail.com </a></li>
+            <li><a class="black-text text-lighten-3 notMobile" style="margin-left: 8%;">Correo: brunojular00@gmail.com </a></li>
+
+            <li><a class="black-text text-lighten-3 mobile" style="margin-left: 8%;">Correo:</a></li>
+            <li><a class="black-text text-lighten-3 mobile" style="margin-left: 8%;">brunojular00@gmail.com </a></li>
             <li><a class="black-text text-lighten-3" style="margin-left: 8%;"></a></li>
           </ul>
         </div>
